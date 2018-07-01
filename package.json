@@ -5,7 +5,11 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app"
+    "start": "node app",
+    "dev": "NODE_ENV=development babel-node src/index.js",
+    "build": "rm -rf ./dist/ && babel src --out-dir dist/ --copy-files",
+    "prod": "NODE_ENV=production node dist/index.js",
+    "lint": "eslint src"
   },
   "repository": {
     "type": "git",
