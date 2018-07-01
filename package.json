@@ -1,0 +1,24 @@
+{
+  "name": "azurebot",
+  "version": "1.0.0",
+  "description": "test bot on azure",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SwingWithGoyf/Dev.git"
+  },
+  "author": "Jeremy Elgar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SwingWithGoyf/Dev/issues"
+  },
+  "homepage": "https://github.com/SwingWithGoyf/Dev#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  }
+}
