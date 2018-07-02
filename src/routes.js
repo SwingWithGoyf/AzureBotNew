@@ -34,17 +34,17 @@ router.post('/slack/command/hello', async (req, res) => {
 });
 
 router.post('/slack/actions', async (req, res) => {
-    try {
-        const slackReqObj = JSON.parse(req.body.payload);
-        let response;
-        if (slackReqObj.callback_id === 'report_selection') {
-            response = await generateReport({ slackReqObj });
-        }
-        return res.json(response);
-    } catch (err) {
-        log.error(err);
-        return res.status(500).send('Something blew up. We\'re looking into it.');
+  try {
+    const slackReqObj = JSON.parse(req.body.payload);
+    let response;
+    if (slackReqObj.callback_id === 'report_selection') {
+      response = await generateReport({ slackReqObj });
     }
+    return res.json(response);
+  } catch (err) {
+    log.error(err);
+    return res.status(500).send('Something blew up. We\'re looking into it.');
+  }
 });
 
 export default router;
