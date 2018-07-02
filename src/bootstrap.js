@@ -1,14 +1,14 @@
 import bodyParser from 'body-parser';
 
 import { log } from './utils';
-import routes from './routes';
+import router from './router';
 
 export default function (app) {
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({ extended: true }));
 
-  // Routes
-  app.use(routes);
+  // Router
+  app.use(router);
 
   // 404
   app.use((req, res) => {
