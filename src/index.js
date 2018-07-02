@@ -13,7 +13,7 @@ app.start = async () => {
   const port = normalizePort(config.get('port'));
   app.set('port', port);
   bootstrap(app);
-  const server = http.createServer(app);
+  server = http.createServer(app);
 
   server.on('error', (error) => {
     if (error.syscall !== 'listen') throw error;
