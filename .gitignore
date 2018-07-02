@@ -1,2 +1,3 @@
 config/development.json
 dist/**
+reportFiles/**
